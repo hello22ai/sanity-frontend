@@ -11,7 +11,7 @@ const POSTS_QUERY = defineQuery(`*[
 ] | order(publishedAt desc, _createdAt desc) [$start...$end] {
   _id, title, slug, publishedAt, description, featureImage, tags
 }`);
-
+ 
 const COUNT_QUERY = defineQuery(
   `count(*[_type == "post" && defined(slug.current)])`,
 );
